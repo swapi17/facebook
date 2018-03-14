@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Facebook Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find your facebook page details using Facebook Graph API">
+
+    <!-- stylesheet css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+    <!--Fb Homepage header section-->
+    <header id="fbHome" class="center text-white text-center">
+
+	<h1 >Welcome!</h1>
+	<h3 >Want to know about a facebook page? Here we go...</h3>
+    
+
+        <div class="row center " >
+	<div class="form-group field-size col-lg-6 col-sm-10">
+	      <label for="api" >API ACCESS TOKEN</label>
+	      <input type="text" class="form-control " id="api" placeholder="Paste in user access token here ">
+	</div>
+        </div>
+
+        <div class="btn-group">
+	<button id="fbProfileBtn" class="btn btn-primary ">Get facebook profile</button>
+	<button id="fbFeedBtn" class="btn btn-primary ">Get facebook feed</button>
+        </div>
+
+</header> <!-- end homepage header -->
+
+<!--output info-->
+<div id="output">
+
+<!--facebook cover photo and profile photo goes here -->
+   <div id="fbCoverProfile">
+
+     <div id="cover-image" >
+         <img class="myCoverPic "  alt="cover pic ">
+     </div>
+
+     <div id="profile-photo">
+         <img  class="myProfilePic thumbnail " alt="profile pic ">
+     </div>
+
+   </div><!-- end fb cover profile -->
+
+
+<!--facebook profile info page -->
+<div id="fbProfileInfo">
+
+<!--fb profile info navigation-->
+   <nav class="navbar navbar-default navbar-pos navbar-mpos ">
+   <div>
+    <ul class="nav navbar-nav nav-pos ">
+      <li class="nav-item active "><a data-toggle="tab" id="navToAbout" href="#about" class="nav-link ">About</a></li>
+      <li class="nav-item "><a data-toggle="tab " id="navToWork" href="#work" class="nav-link ">Work</a></li>
+      <li  class="nav-item "><a data-toggle="tab " id="navToFamily" href="#family" class="nav-link ">Family</a></li>
+      <li  class="nav-item "><a data-toggle="tab " id="navToContact" href="#contact" class="nav-link ">Contact</a></li>
+    </ul>
+   </div>
+   </nav> <!-- end navigation -->
+
+
+<!--fb profile info-->
+<div class="row profile-info-pos ">
+         <!-- About me Section -->
+              <div id="about" class="col-md-8 col-sm-12 col-lg-8 ">
+               
+                  
+                  <h3 class="info-title ">About Me</h3>
+                  <hr>                 
+                  <p class="info"><span class="field-title ">Firstname</span> <span class="field-separator
+        "></span> <span id="myFirstName" class="field-value "></span></p><hr>
+                  <p class="info "><span class="field-title ">Lastname</span> <span class="field-separator
+        "></span> <span id="myLastName" class="field-value "></span></p><hr>
+                  <p class="info"><span class="field-title ">Fullname</span> <span class="field-separator
+        "></span> <span id="myFullName" class="field-value "></span></p><hr>
+                  <p class="info"><span class="field-title ">Profile ID</span> <span class="field-separator
+        "></span> <span id="myProfileId" class="field-value " data-toggle="tooltip " title="visit your facebook profile "></span></p><hr>
+                  <p class="info"><span class="field-title ">Gender</span> <span class="field-separator
+        "></span> <span id="myGender"class="field-value "></span></p><hr>
+                  <p class="info"><span class="field-title ">Birtday</span> <span class="field-separator
+        "></span> <span id="myBirthday"class="field-value "></span></p><hr>
+                  <p class="info"><span class="field-title ">Languages</span> <span class="field-separator
+        "></span> <span id="myLanguages"class="field-value "></span></p><hr>
+                  <p class="info"><span class="field-title ">Hometown</span> <span class="field-separator
+        "></span> <span id="myHometown"class="field-value "></span></p><hr>
+                  <p class="info"><span class="field-title ">My Quotes</span> <span class="field-separator
+        "></span> <span id="myQuotes"class="field-value "></span></p>
+                  
+                 
+                
+              </div>
+               <!-- Work and Education info -->
+              <div id="work" class="fb-info col-md-8 col-sm-12 col-lg-8 ">
+               
+                  
+                  <h3 class="info-title">Work and Education</h3>
+                  <hr>                 
+                  <p class="info"><span class="field-title ">Work</span> <span class="field-separator
+        "></span> <span id="myWork" class="field-value "></span></p><hr>
+                  <p class="info"><span class="field-title ">Education</span> <span class="field-separator
+        "></span> <span id="myEducation" class="field-value "></span></p>
+  
+                 
+                
+              </div>
+               <!-- Family and Relationship info -->
+              <div id="family" class="fb-info col-md-8 col-sm-12 col-lg-8 ">
+               
+                  
+                  <h3 class="info-title">Family & Relationship</h3>
+                  <hr>                 
+                  <p class="info"><span class="field-title ">Relationship Status</span> <span class="field-separator
+        "></span> <span id="myRelationship" class="field-value "></span></p><hr>
+
+                  <p class="info"><span class="field-title ">Family members</span> <span class="field-separator
+        "></span> <span id="myFamily" class="field-value "></span></p>
+              
+                  
+                 
+                
+              </div>
+               <!-- contact info-->
+              <div id="contact" class="fb-info col-md-8 col-sm-12 col-lg-8 ">
+               
+                  
+                  <h3 class="info-title ">Contact</h3>
+                  <hr>                 
+                  <p class="info"><span class="field-title ">Email</span> <span class="field-separator
+        "></span> <span id="myEmail" class="field-value "></span></p><hr>
+                  <p class="info"><span class="field-title ">Website</span> <span class="field-separator
+        "></span> <span id="myWebsite" class="field-value "></span></p>
+         
+                 
+                
+              </div>
+           </div>
+            </div> <!-- end profile info row -->
+           
+      </div> <!-- end facebook profile info page-->
+
+  <!-- Facebook Posts Feed info page -->
+    
+      <div id="fbFeedInfo"> <!-- fb feeds html appended using JQuery-->
+	
+      </div>
+<!--end Fb posts feed-->
+
+<!-- Go back to homepage Btn-->
+
+        <div id="goBackBtn">
+          <button  class="btn btn-primary">Go Back to Home page</button>
+        </div><!--end go back btn-->
+
+</div><!--End output-->
+
+
+<!--script section-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="fb.js"></script>
+</body>
+</html>

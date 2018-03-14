@@ -1,0 +1,258 @@
+
+
+h3{
+line-height:1.5;
+
+}
+.center{
+margin:5% auto;
+}
+.text-white{
+color:#FFF;
+}
+.btn {
+  border-width: 2px;
+  padding: 10px 15px;
+}
+#fbProfileBtn{
+margin-right:1.5rem;
+margin-bottom:1.5rem;
+}
+#fbFeedBtn{
+min-width:160px;
+}
+.field-size{
+margin:0.8rem auto;
+height:46px;
+float:unset;
+color:#ccc;
+}
+.myCoverPic{
+
+width: 80%;  
+margin:auto;
+display: block;
+max-height: 315px;
+
+}
+ 
+.myProfilePic{
+width:150px;
+height:150px;
+margin-top: -125px;
+margin-left: 12%;
+z-index:9;
+position:absolute;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px){
+
+.myCoverPic{
+
+width: 100%;  
+margin:auto;
+display: block;
+max-height: 290px;
+
+}
+.myProfilePic{
+width:125px;
+height:125px;
+margin-top: -90px;
+margin-left:35%;
+z-index:9;
+position:absolute;
+}
+.navbar-mpos{
+width:100%;
+margin:auto;
+margin-top:44px;
+
+}
+.nav-item{
+width:25%;
+text-align:center;
+}
+.profile-info-pos{
+margin-left:auto;
+margin-right:auto;
+margin-bottom:20%;
+background-color:#fff;
+padding-top:5%;
+}
+.post1{
+border: 1px solid #ccc;
+width:100%;
+height:auto;
+padding:20px;
+margin:auto;
+margin-top:20px;
+margin-bottom:20px;
+text-align:center;
+background-color: #efefef;
+}
+.post2{
+width:100%;
+max-height:70%;
+padding:20px;
+border: 1px solid #ccc;
+margin:auto;
+margin-top:20px;
+margin-bottom:20px;
+text-align:center;
+background-color: #efefef;
+}
+#fbFeedInfo{
+    width: 100%;
+    margin:auto;
+    
+    }
+.picture {
+        width:100%;
+        min-height:300px;
+        background-repeat: no-repeat;
+        background-color: #fff;
+        background-size: cover;
+    
+    }
+} 
+@media only screen and (min-device-width:768px){
+.navbar-pos{
+width:80%;
+margin:auto;
+margin-top:32px;
+
+}
+.profile-info-pos{
+width:80%;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:20%;
+border: 1px solid #ccc;
+background-color:#fff;
+padding:5%;
+}
+.post1{
+border: 1px solid #ccc;
+width:500px;
+padding: 20px;
+margin:auto;
+margin-top:10px;
+margin-bottom:10px;
+text-align:center;
+background-color: #efefef;
+}
+.post2{
+width:500px;
+max-height:900px;
+padding:20px;
+border: 1px solid #ccc;
+margin:auto;
+margin-top:10px;
+margin-bottom:10px;
+text-align:center;
+background-color: #efefef;
+}
+.picture {
+    width: 455px;
+    height: 360px;
+    background-repeat: no-repeat;
+    background-color: #dedede;
+    background-size: cover;
+
+}
+#fbFeedInfo{
+    width: 500px;
+    margin:auto;
+    }
+}
+.nav-pos{
+float:left;
+margin:auto;
+display: flex;
+width:100%;
+
+}
+.navbar{
+min-height:0;
+}
+.nav-link{
+font-size:16px;
+font-weight:bold;
+
+}
+
+.info-title{
+margin-left:20px;
+color:#90949c;
+text-transform:uppercase;
+}
+.info{
+margin-left:20px;
+}
+.info span {
+    display: table-cell;
+    position: relative;
+}
+.info .field-title {
+    width: 80px;
+    font-size: 16px;
+    font-weight:normal;
+    color:#A8AAB1;
+    line-height: 20px;
+    
+}
+.info .field-separator {
+    text-align: center;
+    width: 80px;
+}
+.info .field-value{
+font-weight:bold;
+font-size: 16px;
+line-height: 20px;
+word-wrap:break-word;
+
+}
+
+
+
+.story {
+	font-size: 15px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.likeCommentContainer {
+    padding: 10px 0px 0px;
+    height: 25px;
+}
+
+.likeBox {
+   float:left;
+   margin-right:4px;
+}
+
+.commentBox {
+   float: right;
+}
+
+
+.likes{
+float:left;
+}
+.comments{
+float:right;
+}
+.badge{
+margin-left:3px;
+}
+#fbFeedInfo{
+margin-top:40px;
+}
+#goBackBtn{
+margin:auto;
+margin-bottom:40px;
+margin-top:40px;
+text-align:center; 
+}
+
+
